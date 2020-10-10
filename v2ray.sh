@@ -2331,13 +2331,13 @@ install_bbr() {
 }
 install_lotserver() {
 	# https://moeclub.org/2017/03/08/14/
-	wget --no-check-certificate -qO /tmp/appex.sh "https://raw.githubusercontent.com/0oVicero0/serverSpeeder_Install/master/appex.sh"
+	wget --no-check-certificate -qO /tmp/appex.sh "https://raw.staticdn.net/0oVicero0/serverSpeeder_Install/master/appex.sh"
 	bash /tmp/appex.sh 'install'
 	rm -rf /tmp/appex.sh
 }
 uninstall_lotserver() {
 	# https://moeclub.org/2017/03/08/14/
-	wget --no-check-certificate -qO /tmp/appex.sh "https://raw.githubusercontent.com/0oVicero0/serverSpeeder_Install/master/appex.sh"
+	wget --no-check-certificate -qO /tmp/appex.sh "https://raw.staticdn.net/0oVicero0/serverSpeeder_Install/master/appex.sh"
 	bash /tmp/appex.sh 'uninstall'
 	rm -rf /tmp/appex.sh
 }
@@ -2449,9 +2449,9 @@ update_v2ray() {
 }
 update_v2ray.sh() {
 	if [[ $_test ]]; then
-		local latest_version=$(curl -H 'Cache-Control: no-cache' -s -L "https://raw.githubusercontent.com/233boy/v2ray/test/v2ray.sh" | grep '_version' -m1 | cut -d\" -f2)
+		local latest_version=$(curl -H 'Cache-Control: no-cache' -s -L "https://raw.staticdn.net/233boy/v2ray/test/v2ray.sh" | grep '_version' -m1 | cut -d\" -f2)
 	else
-		local latest_version=$(curl -H 'Cache-Control: no-cache' -s -L "https://raw.githubusercontent.com/233boy/v2ray/master/v2ray.sh" | grep '_version' -m1 | cut -d\" -f2)
+		local latest_version=$(curl -H 'Cache-Control: no-cache' -s -L "https://raw.staticdn.net/233boy/v2ray/master/v2ray.sh" | grep '_version' -m1 | cut -d\" -f2)
 	fi
 
 	if [[ ! $latest_version ]]; then
